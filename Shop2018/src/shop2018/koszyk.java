@@ -1,6 +1,7 @@
 
 package shop2018;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,12 +14,12 @@ public class koszyk {
         lista.add(p);
     }
     
-    public double doZaplaty()
+    public BigDecimal doZaplaty()
     {
-        double suma = 0;
+        BigDecimal suma = BigDecimal.ZERO;
         for (produkt p : lista)
         {
-           suma+=p.gCena();
+           suma=suma.add(p.gCena());
         }
         return suma;
     }

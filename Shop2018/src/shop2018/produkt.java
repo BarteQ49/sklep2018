@@ -1,12 +1,14 @@
 
 package shop2018;
 
+import java.math.BigDecimal;
+
 
 public class produkt {
     private String nazwa;
-    private double cena;
+    private BigDecimal cena;
     
-    public produkt(String nazwa, double cena){
+    public produkt(String nazwa, BigDecimal cena){
         this.nazwa = nazwa;
         this.cena = cena;
         
@@ -16,7 +18,7 @@ public class produkt {
         return nazwa;
     }
     
-    public double gCena()
+    public BigDecimal gCena()
     {
         return cena;
     }
