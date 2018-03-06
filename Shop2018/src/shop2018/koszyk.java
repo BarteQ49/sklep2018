@@ -16,7 +16,16 @@ public class koszyk {
     public void dodaj(produkt p)
     {
        // lista.add(p);
-        map.put(p,1);
+        if(map.containsKey(p))
+        {
+            int i = map.get(p);
+            i++;
+            map.put(p,i);   
+        }
+        else
+        {
+            map.put(p,1);
+        }    
     }
     
     public BigDecimal doZaplaty()
