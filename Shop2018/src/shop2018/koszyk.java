@@ -24,4 +24,9 @@ public class koszyk {
         return suma;
     }
     
+    public String toString()
+    {
+        return lista.toString()+" "+doZaplaty();
+    }
+    
 }

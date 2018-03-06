@@ -20,6 +20,7 @@ public class Shop2018 {
         Koszyk.dodaj(Bulka);
         
         System.out.println(Koszyk.doZaplaty());
+        System.out.println(Koszyk);
         
     }
     
