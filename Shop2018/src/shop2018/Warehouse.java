@@ -32,7 +32,10 @@ public class Warehouse {
     
     public Collection<product> productsSortByPrice()
     {
-        return null;
+        PriceComparator c = new PriceComparator();
+        TreeSet<product> set = new TreeSet(c);
+        set.addAll(products);
+        return set;
     }
     
     
@@ -46,6 +49,7 @@ public class Warehouse {
         Warehouse w = new Warehouse();
         System.out.println(w);
         System.out.println(w.productsSortByName());
+        System.out.println(w.productsSortByPrice());
     }
     
 }
