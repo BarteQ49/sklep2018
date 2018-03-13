@@ -2,11 +2,13 @@
 package shop2018;
 
 import java.math.BigDecimal;
+import java.util.Comparator;
 
 
-public class product {
+public class product implements Comparable<product>{
     private String name;
     private BigDecimal price;
+    private int count = 100;
     
     public product(String name, BigDecimal price){
         this.name = name;
@@ -25,7 +27,25 @@ public class product {
     
     public String toString()
     {
-        return name + " ("+price+"zl)"; 
+        return name + " ("+price+" zl "+ count +" szt.)"; 
     }
+    
+    public int gCount()
+    {
+        return count;
+    }
+    
+    public void setCount(int count)
+    {
+        this.count = count;
+    }
+
+    @Override
+    public int compareTo(product second) {
+        return name.compareTo(second.name);
+    }
+    
+     
+    
     
 }

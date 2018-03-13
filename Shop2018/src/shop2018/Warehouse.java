@@ -38,6 +38,11 @@ public class Warehouse {
         return set;
     }
     
+    public void doOrder(cart Cart)
+    {
+        
+    }
+    
     
     @Override
     public String toString()
@@ -50,6 +55,7 @@ public class Warehouse {
         System.out.println(w);
         System.out.println(w.productsSortByName());
         System.out.println(w.productsSortByPrice());
+       
     }
     
 }

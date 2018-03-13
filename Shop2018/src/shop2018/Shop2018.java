@@ -8,19 +8,24 @@ public class Shop2018 {
 
     
     public static void main(String[] args) {
-        produkt chleb = new produkt("chleb", new BigDecimal("2.1"));
-        produkt olej = new produkt("olej", new BigDecimal("3.1"));
-        produkt Woda = new produkt("Woda", new BigDecimal("1.8"));
-        produkt Bulka = new produkt("Bulka", new BigDecimal("0.45"));
+        product chleb = new product("chleb", new BigDecimal("2.1"));
+        product olej = new product("olej", new BigDecimal("3.1"));
+        product Woda = new product("Woda", new BigDecimal("1.8"));
+        product Bulka = new product("Bulka", new BigDecimal("0.45"));
         
-        koszyk Koszyk = new koszyk();
-        Koszyk.dodaj(chleb);
-        Koszyk.dodaj(chleb);
-        Koszyk.dodaj(Woda);
-        Koszyk.dodaj(Bulka);
+        cart Koszyk = new cart();
+        Koszyk.add(chleb);
+        Koszyk.add(chleb);
+        Koszyk.add(Woda);
+        Koszyk.add(Bulka);
         
-        System.out.println(Koszyk.doZaplaty());
+        System.out.println(Koszyk.toPay());
         System.out.println(Koszyk);
+        
+        Warehouse w = new Warehouse();
+        System.out.println(w);
+        w.doOrder(Koszyk);
+        System.out.println(w);
         
     }
     
